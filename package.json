@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/telenko/node-mf/issues"
   },
-  "homepage": "https://github.com/telenko/node-mf#readme"
+  "homepage": "https://github.com/telenko/node-mf#readme",
+  "dependencies": {
+    "follow-redirects": "^1.14.1"
+  }
 }

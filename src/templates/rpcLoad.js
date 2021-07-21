@@ -17,7 +17,8 @@ module.exports = `
             throw new Error("invalid number of arguments");
         }
         //TODO https support
-        let request = (url.startsWith('https') ? require('https') : require('http')).get(url, function(resp) {
+        const { http, https } = require('follow-redirects');
+        let request = (url.startsWith('https') ? https : http).get(url, function(resp) {
             if (resp.statusCode === 200) {
                 let rawData = '';
                 resp.setEncoding('utf8');
